@@ -1,0 +1,9 @@
+config.yml
+data/version/runalyze*
+nodes.md
+traefik.toml 
+srtm_*
+.history
+.env
+web-app/data/version/runalyze.tar.gz
+web-app/data/timezone.sqlite.tar.gz

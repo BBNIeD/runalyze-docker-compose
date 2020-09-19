@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  db:
+    image: mariadb:10.1.31
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: runalyze
+      MYSQL_USER: runalyze
+      MYSQL_PASSWORD: test
+    volumes:
+      - runalyze_data:/var/lib/mysql
+  webapp:
+      depends_on:
+        - db
+      build:
+        context: ./web-app
+        args:
+          runalyze_web_app_config: ${RUNALYZE_WEB_APP_CONFIG:-default_config.yml}
+      ports:
+        - "8000:80"
+
+volumes:
+  runalyze_data:
+    name: ${RUNALYZE_DATA_VOLUME:-default_runalyze_data_volume}

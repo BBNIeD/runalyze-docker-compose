@@ -8,6 +8,8 @@ As Runalyze is a web application some infrastructure components like a web-serve
 ## Limitation
 Runalyze moved from an open source model to closed source. The last released version contains a bug and a unclear license situation. Hence, not a bugfix is provided but a instruction to patch the last release.
 
-## Credits
+## Installation
+The [installation guide](doc/installationGuide.md) is giving a detailed step by step introduction to install Runalyze.
 
+## Credits
 Thank you, Runalyze Team for providing this amazing tool. It is still one of my frequently used tools to track my running activities.

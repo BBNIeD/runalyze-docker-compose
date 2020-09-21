@@ -57,3 +57,22 @@ mysql -u runalyze -p runalyze
 
 ALTER TABLE `runalyzetraining` ADD `is_power_calculated` TINYINT(1) DEFAULT NULL AFTER `power`;
 ```
+## Install runalyze
+
+Start the docker containers with docker-compose:
+``` bash
+# Start the container in the foreground
+docker-compose up
+
+# Start the container in the background
+docker-compose up -d
+
+# Stop the container
+docker-compose down
+```
+If the *webapp* container does not start correctly, use `docker-compose down` and then `docker-compose up`
+
+### Start the setup process of runalyze
+- Open the URL *http://127.0.0.1:8000/install/start* in your browser
+- Follow the instruction on the screen to setup runalyze. After the successful setup, a new user account must be created.
+- Congratulation, you should be able to login to Runalyze via *http://127.0.0.1:8000* and upload your first activity. *Enjoy Running :-)*
